@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;  
+      background-color: #3e272f;
+
+}
+::-webkit-scrollbar {
+    display: none; 
+}
+.banner {
+    width: 100%;
+}
+
+.start {
+    position: absolute;
+    z-index: 100;
+    top: 2200px;
+    right: 1000px;
+    padding: 1rem;
+    background-color: #fd9ac3;
+    border-color: transparent;
+    cursor: pointer;
+    color: #f9f7e1;
+    border-radius: 20px;
+    font-weight: bolder;
+    transition-duration: 0.5s;
+margin-left: 10px;}
+
+.start:hover {
+    background-color: #f9f7e1;
+    color: #3e272f;
+}
+
+.navbar {
+    position: sticky; 
+    top: 2; 
+    width: 95.5%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 192, 218, 0.626); /* Fondo transparente */
+    padding: 10px 20px;
+    border-radius: 30px; /* Bordes redondeados, opcional */
+    margin: 10px;
+}
+
+.navbar-menu {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex;
+    gap: 60px; /* Espacio entre elementos */
+    margin: 0;
+    padding: 5px;
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #ffffff; /* Color del texto */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    gap: 1px;
+}
+
+.navbar-menu a:hover {
+    color: #c73487; /* Color amarillo pastel al pasar el mouse */
+}
+
+
+.title {
+    background-color: #3e272f;
+color: #e65c96;
+width: 100%;
+height: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 40px;
+font-family: "Borel", cursive;
+font-size: 40px;
+}
+
+.wrapper {
+    z-index: 1;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3e272f;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(215, 138, 170, 0.623);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #e65c96;
+    color: rgb(255, 254, 220);
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #f9f7e1;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    color: #f9f8ec;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('./asstes/img1.jpg');
+}
+.card[for="c2"] {
+    background-image: url('./asstes/Frame 3.jpg');
+}
+.card[for="c3"] {
+    background-image: url('./asstes/Frame\ 4.jpg');
+}
+.card[for="c4"] {
+    background-image: url('./asstes/Frame\ 5.jpg');
+}
+
+
+
+
+.footer {
+    background-color: #65434c; /* Fondo oscuro */
+    color: #f2f2f2; /* Texto claro */
+    padding: 20px 0;
+    font-family: Montserrat, sans-serif;}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e65c96; /* Amarillo pastel */
+}
+
+.footer-logo p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links h3, .footer-socials h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffe4a1; /* Amarillo pastel */
+}
+
+.footer-links ul, .footer-socials ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li, .footer-socials ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a, .footer-socials ul li a {
+    text-decoration: none;
+    color: #f2f2f2;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover, .footer-socials ul li a:hover {
+    color: #ffe4a1; /* Amarillo pastel en hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #8f676a;
+    padding-top: 10px;
+    color: #937881;
+}
